@@ -36,8 +36,8 @@ export default {
       // resp = null;
       if(!resp){
         // 内容不存在
-        this.$router.push("/404")
-        return
+       return this.$router.push("/404")
+        // return
       }
       titleController.setRouteTitle(resp.title);
       return resp;

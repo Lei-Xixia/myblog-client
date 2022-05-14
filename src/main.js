@@ -1,5 +1,5 @@
 // 入口文件
-// import "./mock";
+import "./mock";
 import Vue from "vue";
 import App from "./App.vue";
 // 导入全局样式文件
@@ -26,9 +26,3 @@ new Vue({
   store,
   render: (h) => h(App),
 }).$mount("#app");
-
-// import { getSetting } from "./api/setting";
-
-// getSetting().then((resp) => {
-//   console.log(resp);
-// });

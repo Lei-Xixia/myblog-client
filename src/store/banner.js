@@ -23,8 +23,8 @@ export default {
       const resp = await getBanners();
       // console.log(resp);
       for (var item of resp) {
-        item.bigImg = "http://localhost:7001" + item.bigImg
-        item.midImg = "http://localhost:7001" + item.midImg
+        item.bigImg = item.bigImg
+        item.midImg = item.midImg
       }
       ctx.commit("setData", resp);
       ctx.commit("setLoading", false);

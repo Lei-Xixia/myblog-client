@@ -41,9 +41,9 @@ export default {
     async fetchData() {
       const result = await msgApi.getMessages(this.page, this.limit);
       // console.log(result);
-      for (var item of result.rows) {
-        item.avatar = "http://localhost:7001" + item.avatar;
-      }
+      // for (var item of result.rows) {
+      //   item.avatar = item.avatar;
+      // }
       return result;
     },
     handleScroll(dom) {
@@ -70,9 +70,10 @@ export default {
     async handleSubmit(data, callback) {
       var result = await msgApi.postMessage(data);
       // console.log(result);
-      result.avatar = "http://localhost:7001" + result.avatar;
+      result.avatar = result.avatar;
       callback("感谢您的留言");
       this.data.rows.unshift(result);
+      this.data.total++;
     },
   },
 };

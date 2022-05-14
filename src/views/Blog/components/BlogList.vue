@@ -89,9 +89,9 @@ export default {
         this.routeInfo.limit,
         this.routeInfo.categoryId
       );
-      for(var item of result.rows){
-        item.thumb = 'http://localhost:7001' + item.thumb
-      }
+      // for(var item of result.rows){
+      //   item.thumb = 'http://localhost:7001' + item.thumb
+      // }
       return result;
     },
     handldePageChange(newPage) {
@@ -104,13 +104,13 @@ export default {
         // 当前没有分类
         // /article?page=${newPage}&limit=${this.routeInfo.limit}
         // $router 用于控制页面跳转，并且是无刷新的
-        this.$router.push({
+       return this.$router.push({
           name: "Blog",
           query,
         });
       } else {
         // /article/cate/${this.routeInfo.categoryId}?page=${newPage}&limit=${this.routeInfo.limit}
-        this.$router.push({
+      return  this.$router.push({
           name: "CategoryBlog",
           query,
           params: {

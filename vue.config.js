@@ -1,15 +1,14 @@
-// vue-cli的配置文件
+// // vue-cli的配置文件
 
 module.exports = {
+  publicPath: ".",
   devServer: {
+    open: false,
     proxy: {
       "/api": {
-        target: "http://localhost:7001",
+        target: "http://test.my-site.com",
       },
-      "/static" : {
-        target: "http://127.0.0.1:7001"
-      }
     },
   },
-  configureWebpack: require("./webpack.config"),
+  // configureWebpack: require("./webpack.config"),
 };

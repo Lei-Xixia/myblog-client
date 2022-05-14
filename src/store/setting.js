@@ -19,10 +19,9 @@ export default {
     async fetchSetting(ctx) {
       ctx.commit("setLoading", true);
       const resp = await getSetting();
-      // console.log(resp);
-      resp.avatar = 'http://localhost:7001' + resp.avatar;
-      resp.qqQrCode = 'http://localhost:7001' + resp.qqQrCode;
-      resp.weixinQrCode = 'http://localhost:7001' + resp.weixinQrCode;
+      resp.avatar = resp.avatar;
+      resp.qqQrCode = resp.qqQrCode;
+      resp.weixinQrCode = resp.weixinQrCode;
       ctx.commit("setData", resp);
       ctx.commit("setLoading", true);
       if (resp.favicon) {

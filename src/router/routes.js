@@ -3,8 +3,8 @@ import NotFound from "@/views/NotFound.vue";
 import { start, done, configure } from "nprogress";
 
 configure({
-  trickleSpeed:20,
-  showSpinner:false,
+  trickleSpeed:20, //速度
+  showSpinner:false, // 不显示加载时旋转的圈
 });
 
 function delay(duration) {
@@ -32,6 +32,14 @@ export default [
   {
     name: "Home",
     path: "/",
+    component: getPageComponent(() =>
+      import(/**webpackChunkName: "home" */ "@/views/Home")
+    ),
+    meta: { title: "首页" },
+  },
+  {
+    name: "Home",
+    path: "/index.html",
     component: getPageComponent(() =>
       import(/**webpackChunkName: "home" */ "@/views/Home")
     ),

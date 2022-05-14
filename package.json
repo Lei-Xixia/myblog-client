@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --modern",
+    "build": "vue-cli-service build",
     "test:Pager": "vue serve ./src/components/Pager/test.vue",
     "test:Avatar": "vue serve ./src/components/Avatar/test.vue",
     "test:Icon": "vue serve ./src/components/Icon/test.vue",
@@ -16,7 +16,10 @@
     "test:SlotTest": "vue serve ./src/components/SlotTest/test.vue",
     "test:Layout": "vue serve ./src/components/Layout/test.vue",
     "test:Loading": "vue serve ./src/components/Loading/test.vue",
-    "test:RightList": "vue serve ./src/views/Blog/components/RightList-test.vue"
+    "test:RightList": "vue serve ./src/views/Blog/components/RightList-test.vue",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist -r https://github.com/Lei-Xixia/mysite-client.git -b mysite-client-page"
+    
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -32,6 +35,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "gh-pages": "^4.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11",

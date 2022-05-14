@@ -69,7 +69,7 @@ export default {
   color: @gray;
   a {
     &.selected {
-      background-color: #2d2d2d;
+      background-color: #f1e4a5b0;
     }
     display: block;
     display: flex;

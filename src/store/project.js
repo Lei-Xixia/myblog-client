@@ -23,7 +23,7 @@ export default {
       const resp = await getProjects();
       // console.log(resp);
       for(var item of resp){
-        item.thumb = "http://localhost:7001" + item.thumb
+        item.thumb = item.thumb
       }
       ctx.commit("setData", resp);
       ctx.commit("setLoading", false);

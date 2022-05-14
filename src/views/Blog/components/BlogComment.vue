@@ -55,9 +55,9 @@ export default {
         this.page,
         this.limit
       );
-      for (var item of result.rows) {
-        item.avatar = "http://localhost:7001" + item.avatar;
-      }
+      // for (var item of result.rows) {
+      //   item.avatar = item.avatar;
+      // }
       return result;
     },
     async fetchMore() {
@@ -77,7 +77,7 @@ export default {
         blogId: this.$route.params.id,
         ...formData,
       });
-      resp.avatar = "http://localhost:7001" + resp.avatar;
+      // resp.avatar = "http://localhost:7001" + resp.avatar;
       // 将添加的评论数据添加到数组的开头
       this.data.rows.unshift(resp);
       this.data.total++;
