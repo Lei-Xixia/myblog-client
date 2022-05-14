@@ -1,5 +1,5 @@
 {
-  "name": "my-site",
+  "name": "my-blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,7 +18,7 @@
     "test:Loading": "vue serve ./src/components/Loading/test.vue",
     "test:RightList": "vue serve ./src/views/Blog/components/RightList-test.vue",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist -r https://github.com/Lei-Xixia/mysite-client.git -b mysite-client-page"
+    "deploy":"gh-pages -d dist -r https://github.com/Lei-Xixia/myblog-client.git -b myblog-client-page"
     
   },
   "dependencies": {
